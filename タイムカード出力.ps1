@@ -1,3 +1,7 @@
+# --------------------------------------------------
+# タイムカードの内容をテキストファイルに出力する
+# --------------------------------------------------
+
 # 出力ファイルパス
 $filePath = "TimeCard.txt"
 
@@ -28,20 +32,20 @@ while ($i -le 31) {
 
     # 開始時間の入力がなかったらデフォルト値を設定する
     $startTime = $doc.getElementsByName("start")
-    if ($startTIme[$i -1].value -eq $null) {
+    if ($startTime[$i -1].value -eq $null) {
         $outStartTime = "09:00"
     }
     else {
-        $outStartTime = $startTIme[$i -1].value
+        $outStartTime = $startTime[$i -1].value
     }
 
     # 終了時間の入力がなかったらデフォルト値を設定する
     $endTime = $doc.getElementsByName("end")
-    if ($endTIme[$i -1].value -eq $null) {
+    if ($endTime[$i -1].value -eq $null) {
         $outEndTime = "17:30"
     }
     else {
-        $outEndTime = $endTIme[$i -1].value
+        $outEndTime = $endTime[$i -1].value
     }
 
     # タブ区切りで内容を出力する
