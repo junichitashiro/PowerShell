@@ -1,6 +1,8 @@
 # --------------------------------------------------
 # テキストファイルの内容をタイムカードに入力する
 # --------------------------------------------------
+# メッセージ出力用
+Add-Type -AssemblyName System.Windows.Forms
 
 # URLを指定してIE起動
 $url = "https://d4c-lt.com/contents/samplepage/timecard.html"
@@ -16,7 +18,6 @@ $startTime = $doc.getElementsByName("start")
 $endTime = $doc.getElementsByName("end")
 
 # 開始メッセージ
-Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.MessageBox]::Show("OKボタン押下で入力します","処理開始")
 
 # テキストファイルの読み込み

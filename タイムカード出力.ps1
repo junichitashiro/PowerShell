@@ -1,6 +1,8 @@
 # --------------------------------------------------
 # タイムカードの内容をテキストファイルに出力する
 # --------------------------------------------------
+# メッセージ出力用
+Add-Type -AssemblyName System.Windows.Forms
 
 # 出力ファイルパス
 $filePath = "TimeCard.txt"
@@ -14,7 +16,6 @@ while($ie.Busy) { Start-Sleep -milliseconds 100 }
 $doc = $ie.document
 
 # 開始メッセージ
-Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.MessageBox]::Show("OKボタン押下で内容を出力します","処理開始")
 
 # 出力用ファイルを新規作成
