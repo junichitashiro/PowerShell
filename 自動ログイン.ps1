@@ -11,7 +11,7 @@ $pw = "PW12345"
 $ie = New-Object -ComObject InternetExplorer.Application
 $ie.Visible = $true
 $ie.Navigate($url)
-while($ie.Busy) { Start-Sleep -milliseconds 100 }
+while ($ie.Busy) { Start-Sleep -milliseconds 100 }
 $doc = $ie.document
 
 # ƒƒOƒCƒ“î•ñ‚Ìİ’è

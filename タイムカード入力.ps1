@@ -9,7 +9,7 @@ $url = "https://d4c-lt.com/contents/samplepage/timecard.html"
 $ie = New-Object -ComObject InternetExplorer.Application
 $ie.Visible = $true
 $ie.Navigate($url)
-while($ie.Busy) { Start-Sleep -milliseconds 100 }
+while ($ie.Busy) { Start-Sleep -milliseconds 100 }
 $doc = $ie.document
 
 # 入力対象要素（開始時刻、終了時刻）の変数設定
@@ -18,7 +18,7 @@ $startTime = $doc.getElementsByName("start")
 $endTime = $doc.getElementsByName("end")
 
 # 開始メッセージ
-[System.Windows.Forms.MessageBox]::Show("OKボタン押下で入力します","処理開始")
+[System.Windows.Forms.MessageBox]::Show("OKボタン押下で入力します", "処理開始")
 
 # テキストファイルの読み込み
 $filePath = "TimeCard.txt"
@@ -47,13 +47,13 @@ foreach ($readLine in $inputFile) {
     }
 
     # 開始時刻の入力
-    $startTime[$i -1].value = $col[2]
+    $startTime[$i - 1].value = $col[2]
 
     # 終了時刻の入力
-    $endTime[$i -1].value = $col[3]
+    $endTime[$i - 1].value = $col[3]
 
     $i += 1
 }
 
 # 完了メッセージ
-[System.Windows.Forms.MessageBox]::Show("処理が完了しました","処理完了")
+[System.Windows.Forms.MessageBox]::Show("処理が完了しました", "処理完了")
