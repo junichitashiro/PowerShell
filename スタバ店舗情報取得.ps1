@@ -1,12 +1,14 @@
 # スターバックスのWebサイトから店舗名と住所を抽出してテキストで出力する
 
+# 出力ファイルパスを設定する
+$fileName = "C:\shoplist.txt"
+
+# 出力ファイルを初期化する
+Write-Output "" > $fileName
+
 # 初期設定URL
 Add-Type -AssemblyName System.Windows.Forms
 $url = "https://store.starbucks.co.jp/"
-
-# アウトプットファイル名を設定して初期化する
-$fileName = "C:\Users\junichi\git\PowerShell\shoplist.txt"
-Write-Output "" > $fileName
 
 # --------------------------------------------------
 # IEの初期処理
