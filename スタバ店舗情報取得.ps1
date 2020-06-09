@@ -1,7 +1,7 @@
 # スターバックスのWebサイトから店舗名と住所を抽出してテキストで出力する
 
 # 出力ファイルパスを設定する
-$fileName = "C:\shoplist.txt"
+$fileName = "D:\shoplist.txt"
 
 # 出力ファイルを初期化する
 Write-Output "" > $fileName
