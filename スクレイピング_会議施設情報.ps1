@@ -1,3 +1,10 @@
+# ----------------------------------------------------------------------
+# 会議室.COMのWebサイトから会議室名と住所を抽出してテキストで出力する
+# ----------------------------------------------------------------------
+
+# --------------------------------------------------
+# スクリプトの初期処理
+# --------------------------------------------------
 Add-Type -AssemblyName System.Windows.Forms
 
 # 出力ファイルパスを設定する
@@ -6,8 +13,7 @@ $fileName = "D:\roomlist.txt"
 # 出力ファイルを初期化する
 Write-Output "" > $fileName
 
-# 初期設定URL
-Add-Type -AssemblyName System.Windows.Forms
+# URLを設定する
 $url = "https://www.kaigishitu.com/"
 
 # --------------------------------------------------
@@ -27,7 +33,7 @@ while($ie.Busy) { Start-Sleep -seconds 1 }
 $doc = $ie.document
 
 # --------------------------------------------------
-# 全件検索の実行
+# 全件検索処理
 # --------------------------------------------------
 $doc.getElementById("submit_btn").click()
 while($ie.Busy) { Start-Sleep -seconds 1 }
@@ -36,7 +42,7 @@ while($ie.Busy) { Start-Sleep -seconds 1 }
 # データ取得処理
 # --------------------------------------------------
 # 以下は検索結果ページに「さらに表示」ボタンがある前提で設計している
-# 「さらに表示」ボタンが表示される間、クリックしながら情報を取得し続ける
+# 情報を取得後、「さらに表示」ボタンがある場合クリックして情報を取得し続ける
 $btnHeight = $doc.getElementsByClassName("listMore_btn btn-blue buildingMore")[0].offsetHeight
 $i = 0
 while($btnHeight -ne 0) {
@@ -65,8 +71,6 @@ while($btnHeight -ne 0) {
 
         # 「さらに表示」ボタンの存在をチェックして処理継続を判断する
         $btnHeight = $doc.getElementsByClassName("listMore_btn btn-blue buildingMore")[0].offsetHeight
-
     }
-
 }
 [System.Windows.Forms.Messagebox]::Show("処理が完了しました","完了")
