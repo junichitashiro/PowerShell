@@ -47,6 +47,9 @@ $btnHeight = $doc.getElementsByClassName("listMore_btn btn-blue buildingMore")[0
 $i = 0
 while($btnHeight -ne 0) {
 
+    # 「さらに表示」ボタンの存在チェック
+    $btnHeight = $doc.getElementsByClassName("listMore_btn btn-blue buildingMore")[0].offsetHeight
+
     # 検索結果件数の格納　10件ずつの想定
     $resultCnt = $doc.getElementsByClassName("c-topics__heading p-buildinglist__heading").length -1
 
@@ -69,8 +72,6 @@ while($btnHeight -ne 0) {
         $doc.getElementsByClassName("listMore_btn btn-blue buildingMore")[0].click()
         while($ie.Busy) { Start-Sleep -seconds 3 }
 
-        # 「さらに表示」ボタンの存在をチェックして処理継続を判断する
-        $btnHeight = $doc.getElementsByClassName("listMore_btn btn-blue buildingMore")[0].offsetHeight
     }
 }
 [System.Windows.Forms.Messagebox]::Show("処理が完了しました","完了")
