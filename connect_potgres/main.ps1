@@ -30,9 +30,8 @@ $dataSet = New-Object -TypeName System.Data.DataSet
 $dataAdp.Fill($dataSet) > $null
 
 # --------------------------------------------------
-# データセットをCSV出力する
+# データセットを出力する
 # --------------------------------------------------
-# Dドライブ直下に出力する
 $dataSet.Tables[0] | export-csv D:\export_csvFile.csv -notypeinformation -Encoding Default
 
 # --------------------------------------------------
