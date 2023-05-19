@@ -12,7 +12,7 @@
 
 ## 実行SQL
 
-* __$dbCmd.CommandText__ に格納する
+* **$dbCmd.CommandText** に格納する
 
 ## 出力ファイル
 
