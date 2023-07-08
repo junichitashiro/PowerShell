@@ -17,3 +17,8 @@
 ## 出力ファイル
 
 * Dドライブ直下にcsvで出力する
+
+## 補足
+
+* odbcドライバがない場合は下記から入手する
+* https://www.postgresql.org/ftp/odbc/versions/msi/

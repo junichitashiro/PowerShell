@@ -32,7 +32,7 @@ $dataAdp.Fill($dataSet) > $null
 # --------------------------------------------------
 # データセットを出力する
 # --------------------------------------------------
-$dataSet.Tables[0] | export-csv D:\export_csvFile.csv -notypeinformation -Encoding Default
+$dataSet.Tables[0] | export-csv C:\temp\export_csvFile.csv -notypeinformation -Encoding Default
 
 # --------------------------------------------------
 # DBコネクションを閉じる
