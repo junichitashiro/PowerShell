@@ -8,7 +8,7 @@
 
 ## 対象テーブル名
 
-* test_table
+* test_table（[サンプルテーブルの作成](https://github.com/junichitashiro/Technical-Notes/blob/master/DB/PostgreSQL/サンプルテーブルの作成.md) 参照）
 
 ## 実行SQL
 
@@ -16,7 +16,7 @@
 
 ## 出力ファイル
 
-* Dドライブ直下にcsvで出力する
+* **C:\temp** フォルダにCSVファイルで出力する
 
 ## 補足
 
