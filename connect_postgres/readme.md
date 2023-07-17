@@ -1,10 +1,12 @@
-# PostgreSQLへの接続処理
+# 処理概要
+
+PowerShellからPostgreSQLのDBに接続する
 
 ## 処理内容
 
-1. PostgreSQLに接続する
-2. SQLを実行する
-3. 実行結果を出力する
+1. PowerShellからPostgreSQLに接続する
+2. スクリプトに記載したSQLを実行する
+3. 実行結果を外部ファイルに出力する
 
 ### 対象テーブル名
 
