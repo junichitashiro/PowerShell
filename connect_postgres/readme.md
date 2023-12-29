@@ -10,7 +10,7 @@ PowerShellからPostgreSQLのDBに接続する
 
 ### 対象テーブル名
 
-* test_table（[サンプルテーブルの作成](https://github.com/junichitashiro/Technical-Notes/blob/master/DB/PostgreSQL/サンプルテーブルの作成.md) 参照）
+* test_table（[サンプルテーブルの作成](https://github.com/junichitashiro/Knowledges/blob/master/DB/PostgreSQL/サンプルテーブルの作成.md) 参照）
 
 ### 実行SQL
 
